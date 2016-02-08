@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h1>
+  <strong>Name:</strong>
+  <%= @teacher.name %>
+</h1>
+
+<h2>
+  <strong>Salary:</strong>
+  <%= @teacher.salary %>
+</h2>
+
+<p>
+  <strong>Country:</strong>
+  <%= @teacher.country %>
+</p>
+
+<div class="btn-group">
+<%= link_to 'Edit', edit_teacher_path(@teacher), class: "btn btn-default" %> 
+<%= link_to 'Back', teachers_path, class: "btn btn-default" %>
+</div>

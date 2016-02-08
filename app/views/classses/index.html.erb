@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Class Listing</h1>
+
+  <div class="row">
+    <% @classses.each do |classs| %>
+      <div class="col-md-4">
+       <div class="panel panel-default">
+        <div class="panel-body">
+         <h2>Subject: <%= classs.subject %></h2>
+         <h3>Credits: <%= classs.credits %></h3>
+         <p>Building: <%= classs.building %></p>
+       
+         <div class="btn-group">
+          <%= link_to 'Show', classs, class: "btn btn-default" %>
+          <%= link_to 'Edit', edit_classs_path(classs), class: "btn btn-default" %>
+          <%= link_to 'Destroy', classs, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
+         </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to 'New Class', new_classs_path, class: "btn btn-primary" %>

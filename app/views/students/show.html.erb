@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h1>
+  <strong>Name:</strong>
+  <%= @student.name %>
+</h1>
+
+<h2>
+  <strong>Age:</strong>
+  <%= @student.age %>
+</h2>
+
+<h2>
+  <strong>Age:</strong>
+  <%= @student.grade %>
+</h2>
+
+<div class="btn-group">
+<%= link_to 'Edit', edit_student_path(@student), class: "btn btn-default" %> 
+<%= link_to 'Back', students_path, class: "btn btn-default" %>
+</div>

@@ -1,0 +1,29 @@
+<%= form_for(@classs) do |f| %>
+  <% if @classs.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@classs.errors.count, "error") %> prohibited this classs from being saved:</h2>
+
+      <ul>
+      <% @classs.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= f.label :subject %><br>
+    <%= f.text_field :subject, class: "form-control" %>
+  </div>
+  <div class="field form-group">
+    <%= f.label :credits %><br>
+    <%= f.number_field :credits, class: "form-control" %>
+  </div>
+  <div class="field form-group">
+    <%= f.label :building %><br>
+    <%= f.text_field :building, class: "form-control" %>
+  </div>
+  <div class="actions form-group">
+    <%= f.submit class: "btn btn-primary"%>
+  </div>
+<% end %>
